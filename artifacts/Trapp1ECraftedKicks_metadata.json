@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.17+commit.8df45f5f"
+		"version": "0.8.19+commit.7dd6d404"
 	},
 	"language": "Solidity",
 	"output": {
@@ -465,6 +465,23 @@
 			}
 		],
 		"devdoc": {
+			"events": {
+				"Approval(address,address,uint256)": {
+					"details": "Emitted when `owner` enables `approved` to manage the `tokenId` token."
+				},
+				"ApprovalForAll(address,address,bool)": {
+					"details": "Emitted when `owner` enables or disables (`approved`) `operator` to manage all of its assets."
+				},
+				"Paused(address)": {
+					"details": "Emitted when the pause is triggered by `account`."
+				},
+				"Transfer(address,address,uint256)": {
+					"details": "Emitted when `tokenId` token is transferred from `from` to `to`."
+				},
+				"Unpaused(address)": {
+					"details": "Emitted when the pause is lifted by `account`."
+				}
+			},
 			"kind": "dev",
 			"methods": {
 				"approve(address,uint256)": {
@@ -531,7 +548,7 @@
 		"compilationTarget": {
 			"t1e-crafted-kicks.sol": "Trapp1ECraftedKicks"
 		},
-		"evmVersion": "london",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -648,11 +665,11 @@
 			]
 		},
 		"t1e-crafted-kicks.sol": {
-			"keccak256": "0x52d0b40fa2caeaca03843522d1cf6d0c94c46a33c093b5c4bb99645da8865ade",
+			"keccak256": "0xb7696ef0ee24053799638d7ed074a5b3e587179cd4546bce35adf4ded61249a5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d519a74653cdfdd8952e913064d0d8e5d89019e15fc78e3635c043a57b5849ee",
-				"dweb:/ipfs/QmW6LwHePPEuw5JxtqRbz16aJvVaEhnBjfKW6jUEauftWd"
+				"bzz-raw://0e38e35ae5e6ba46ef3033cbe38f73e5ab8c5092945ad2094cb7bca302006067",
+				"dweb:/ipfs/Qmepg9E8c2Hh1t2moPhUyL3xZKbpE89A7qJshEKNMQMkxj"
 			]
 		}
 	},

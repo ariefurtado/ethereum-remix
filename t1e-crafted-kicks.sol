@@ -19,24 +19,30 @@ contract Trapp1ECraftedKicks is ERC721, Ownable, Pausable {
 
     Counters.Counter private _tokenIdCounter;
 
-    uint maxSupply = 250;
+    uint256 maxSupply = 250;
+
+    string public baseURI = "https://trapp1e.com/nft/crafted/";
 
     constructor() ERC721("Trapp1EArtistKicksCrafted", "TAKC") {
         pause();
     }
 
     function _baseURI() internal pure override returns (string memory) {
-        return "https://trapp1e.com/nft/crafted/";
+        return baseURI;
     }
 
-    function craft(Craftable craftable, uint id) 
+    function setBaseURI(string memory uri) public onlyOwner {
+        baseURI = uri;
+    }
+
+    // TODO: Adicionar variavel com address do contrato que possui as tokens a serem queimadas/burn (Luis ???)
+    // TODO: Adicionar a funcao de craft uma validaçao para verificar que o contrato correto foi passado (Luis ???)
+
+    function craft(Craftable craftable, uint256 id)
         public
         whenNotPaused
     {
-        // Burn token from Craftable contract
         craftable.burn(msg.sender, id, 1);
-
-        // Mint "Crafted" token for recipient
         safeMint(msg.sender);
     }
 
@@ -46,6 +52,8 @@ contract Trapp1ECraftedKicks is ERC721, Ownable, Pausable {
         _tokenIdCounter.increment();
         _safeMint(to, tokenId);
     }
+
+    // Defaults
 
     function pause() public onlyOwner {
         _pause();
@@ -59,7 +67,6 @@ contract Trapp1ECraftedKicks is ERC721, Ownable, Pausable {
     
     function _beforeTokenTransfer(address from, address to, uint256 tokenId, uint256 batchSize)
         internal
-        whenNotPaused
         override(ERC721)
     {
         super._beforeTokenTransfer(from, to, tokenId, batchSize);
