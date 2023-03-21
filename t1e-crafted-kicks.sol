@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/security/Pausable.sol";
 import "@openzeppelin/contracts/token/common/ERC2981.sol";
-import {OperatorFilterer} from "https://github.com/Vectorized/closedsea/blob/main/src/OperatorFilterer.sol";
+import "https://github.com/Vectorized/closedsea/blob/main/src/OperatorFilterer.sol";
 
 contract Craftable {
     function burn(

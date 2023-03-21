@@ -768,11 +768,11 @@
 			]
 		},
 		"t1e-crafted-kicks.sol": {
-			"keccak256": "0x45f0cf09980c4fa5c75c584daf9e0bee4a855468399bf192fd1aad0be5948cf3",
+			"keccak256": "0xc5adb5c381df92b4f421228d00c460a52cc13aa366292d28fb019b826d184e61",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c133d5dac5c86e65b192219347297f39f9b021fdc4f74d2b9217a0e52d90aa82",
-				"dweb:/ipfs/Qmao996oGwk8Fvtenjmcp2KcGF9XocgPMDXYZyE8xJgGTC"
+				"bzz-raw://f6be278da378ca06571bf40c3febe9bc7e5d37f49804ce404fe9bbb823487d71",
+				"dweb:/ipfs/QmRJJnn5DDBqs4V4TdgHjt4RhuQxT32J5YTn1hoYN6aHWe"
 			]
 		}
 	},

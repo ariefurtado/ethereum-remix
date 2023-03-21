@@ -1012,11 +1012,11 @@
 			]
 		},
 		"t1e-artist-kicks.sol": {
-			"keccak256": "0xc01bb25fd9a981fbdaad7e74a153e85dc430d96f74610c76afc29ab71d6e3605",
+			"keccak256": "0xbb8cbabeef9652965cb04a909b5b25a77a0db3b628b70a3505f55221c778af7d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f36cd414f0f3f6bc335b575b8ec54114a1ae9a6f98f21ebe398928a4d65a94ac",
-				"dweb:/ipfs/QmRbJfehAhkFnyT95YjUyyJHmMDP72bVJUmgLsHP1od3vS"
+				"bzz-raw://c5538a83c1e9b96a0ca0af3f8a827b03e5f2aed5841dd3d796c5373b031cb45e",
+				"dweb:/ipfs/QmXcpppbDcybcpuuQyYe2tQk5Xk4DSYrjtmJf3Aep1ENsP"
 			]
 		}
 	},

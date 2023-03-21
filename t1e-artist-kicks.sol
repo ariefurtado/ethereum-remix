@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/access/AccessControl.sol";
 import "@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Supply.sol";
 import "@openzeppelin/contracts/security/Pausable.sol";
 import "@openzeppelin/contracts/token/common/ERC2981.sol";
-import {OperatorFilterer} from "https://github.com/Vectorized/closedsea/blob/main/src/OperatorFilterer.sol";
+import "https://github.com/Vectorized/closedsea/blob/main/src/OperatorFilterer.sol";
 
 contract Trapp1EArtistKicks is ERC1155, Pausable, AccessControl, ERC1155Supply, OperatorFilterer, ERC2981 {
     string public constant name = "Trapp1EArtistKicks";
