@@ -450,6 +450,45 @@
 			},
 			{
 				"inputs": [],
+				"name": "mintCharge",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "operatorFilteringEnabled",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "pause",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -507,6 +546,35 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_salePrice",
+						"type": "uint256"
+					}
+				],
+				"name": "royaltyInfo",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "address",
 						"name": "from",
 						"type": "address"
@@ -551,7 +619,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "id",
+						"name": "tokenId",
 						"type": "uint256"
 					},
 					{
@@ -591,6 +659,19 @@
 			{
 				"inputs": [
 					{
+						"internalType": "bool",
+						"name": "value",
+						"type": "bool"
+					}
+				],
+				"name": "setOperatorFilteringEnabled",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "string",
 						"name": "newuri",
 						"type": "string"
@@ -621,6 +702,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -642,6 +736,19 @@
 			{
 				"inputs": [],
 				"name": "unpause",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "updateMintCharge",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -728,11 +835,11 @@
 				"revokeRole(bytes32,address)": {
 					"details": "Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role. May emit a {RoleRevoked} event."
 				},
+				"royaltyInfo(uint256,uint256)": {
+					"details": "Returns how much royalty is owed and to whom, based on a sale price that may be denominated in any unit of exchange. The royalty amount is denominated and should be paid in that same unit of exchange."
+				},
 				"safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)": {
 					"details": "See {IERC1155-safeBatchTransferFrom}."
-				},
-				"safeTransferFrom(address,address,uint256,uint256,bytes)": {
-					"details": "See {IERC1155-safeTransferFrom}."
 				},
 				"setApprovalForAll(address,bool)": {
 					"details": "See {IERC1155-setApprovalForAll}."
@@ -784,6 +891,14 @@
 				"dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh"
 			]
 		},
+		"@openzeppelin/contracts/interfaces/IERC2981.sol": {
+			"keccak256": "0xa812eed728198acd2c30d06950a5bea8d68436e4f694dd892273266ec2f79f5b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f5522afc5c222c810d9ad67c45f37cb7169452fcf76692cad10ac8153c068daa",
+				"dweb:/ipfs/QmX4XgnDp7pyvojQ6g5tacrUMCf7TED2qC2vERH9Xh9feZ"
+			]
+		},
 		"@openzeppelin/contracts/security/Pausable.sol": {
 			"keccak256": "0x0849d93b16c9940beb286a7864ed02724b248b93e0d80ef6355af5ef15c64773",
 			"license": "MIT",
@@ -830,6 +945,14 @@
 			"urls": [
 				"bzz-raw://e46c80ea068989111d6103e5521223f9ef337e93de76deed8b03f75c6f7b2797",
 				"dweb:/ipfs/QmNoSE6knNfFncdDDLTb3fGR6oSQty1srG96Vsx3E9wQdw"
+			]
+		},
+		"@openzeppelin/contracts/token/common/ERC2981.sol": {
+			"keccak256": "0x9bc4d7eb03c4e87fd5122e03cdff5f60fa360d76925980ad022b2c6fac9876f3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9c6d7cfaac6b54599068126b75474c86ccbbaf386c3581abf82d9cda21b35c81",
+				"dweb:/ipfs/QmPZteoCvkiUgv4TZxv2wiEKR5KqM83UCohHnSGw1RytpM"
 			]
 		},
 		"@openzeppelin/contracts/utils/Address.sol": {
@@ -880,12 +1003,20 @@
 				"dweb:/ipfs/Qmct36zWXv3j7LZB83uwbg7TXwnZSN1fqHNDZ93GG98bGz"
 			]
 		},
-		"t1e-artist-kicks.sol": {
-			"keccak256": "0x2469ea289c8f767435da446128fab740cc8ab6c4b0b6b8d2259c055ff57290e3",
+		"https://github.com/Vectorized/closedsea/blob/main/src/OperatorFilterer.sol": {
+			"keccak256": "0x984dbd92caa6e9ac6a52229f1e481c7a8e9199c005d06be03fdc0c61a32c41f4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b44b8d0f4274986db6ed87c0e5cbd214888088727c84796958e0dbb387e50499",
-				"dweb:/ipfs/QmVMGfK9kCjgLrQx9thcu2KfuWe6cRrEht5g82T2zjfjjq"
+				"bzz-raw://e137534bc1407ebfaddcd43fcb787eacbf982804b52b8c00f2db07d46aac3f62",
+				"dweb:/ipfs/QmX7aJvS1MLdpFK2gCGExZGkrsaGFSqhy1NGviwS1BabYF"
+			]
+		},
+		"t1e-artist-kicks.sol": {
+			"keccak256": "0xc01bb25fd9a981fbdaad7e74a153e85dc430d96f74610c76afc29ab71d6e3605",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f36cd414f0f3f6bc335b575b8ec54114a1ae9a6f98f21ebe398928a4d65a94ac",
+				"dweb:/ipfs/QmRbJfehAhkFnyT95YjUyyJHmMDP72bVJUmgLsHP1od3vS"
 			]
 		}
 	},
