@@ -434,11 +434,6 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "id",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
 						"name": "amount",
 						"type": "uint256"
 					}
@@ -1019,11 +1014,11 @@
 			]
 		},
 		"t1e-artist-kicks.sol": {
-			"keccak256": "0xc05ee26346c18b32fe814bc89f4d905f1176fbac9cff60cb00a4fdf07065199e",
+			"keccak256": "0x48455a18cbafb5cbc87820e0c90a7107d2404da3e7422cfa9ef618ebde51eb9a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c260feb0e5b14486994c78a8d23c664158a23351c21e6c92eed9ab3bb4c046d7",
-				"dweb:/ipfs/QmeSnddNRoznoTyv8q7sKNEKsAXuXuXuX3JabR4UUPigh4"
+				"bzz-raw://49d590456e6efde026d064e8093a9cd50f3b9f19417d5fcc910aa7cec9a8d87e",
+				"dweb:/ipfs/QmVfGT2Uvj6ZUbBcFxrEyJet6WiSzoqgWghoWNPsEv9vpv"
 			]
 		}
 	},

@@ -17,6 +17,8 @@ contract Trapp1EArtistKicks is ERC1155, Pausable, AccessControl, ERC1155Supply, 
 
     uint256 maxSupply = 250;
 
+    uint256 maxTokenPerAddress = 3;
+
     bool public operatorFilteringEnabled;
 
     constructor() ERC1155("https://trapp1e.com/nft/artist/{id}.json") {
@@ -29,16 +31,23 @@ contract Trapp1EArtistKicks is ERC1155, Pausable, AccessControl, ERC1155Supply, 
         // Set royalty receiver to the contract creator,
         // at 5% (default denominator is 10000).
         // _setDefaultRoyalty(msg.sender, 500);
+
+        pause();
     }
 
-    function mint(uint256 id, uint256 amount) 
+    function mint(uint256 amount)
         public 
         payable 
         whenNotPaused 
     {
+        uint256 tokenId = 0;
         require(msg.value == mintCharge * amount, "T1E: Not enough Ether provided.");
-        require(totalSupply(id) + amount <= maxSupply, "T1E: Max supply of tokens reached.");
-        _mint(msg.sender, id, amount, "");
+        require(totalSupply(tokenId) + amount <= maxSupply, "T1E: Max supply of tokens reached.");
+        
+        // Explicar para o Thiago
+        require(balanceOf(msg.sender, tokenId) + amount <= 3, "T1E: Max amount of token sei la....");
+
+        _mint(msg.sender, tokenId, amount, "");
     }
 
     function burn(address from, uint256 id, uint256 amount) public onlyRole(BURN_ROLE) {
