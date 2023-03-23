@@ -26,6 +26,8 @@ contract Trapp1ECraftedKicks is ERC721, Ownable, Pausable, OperatorFilterer, ERC
 
     Craftable craftable;
 
+    event Craft(address indexed sender, uint256 burnedTokenId, uint256 mintedTokenId);
+
     constructor(address _craftable) ERC721("Trapp1EArtistKicksCrafted", "TAKC") {
         // filter for opensea
         _registerForOperatorFiltering();
@@ -47,18 +49,20 @@ contract Trapp1ECraftedKicks is ERC721, Ownable, Pausable, OperatorFilterer, ERC
         baseURI = uri;
     }
 
-    function craft(uint256 id)
+    function craft(uint256 tokenId)
         public
         whenNotPaused
     {
-        craftable.burn(msg.sender, id, 1);
-        safeMint(msg.sender);
+        craftable.burn(msg.sender, tokenId, 1);
+        uint256 mintedId = safeMint(msg.sender);
+        emit Craft(msg.sender, tokenId, mintedId);
     }
 
-    function safeMint(address to) internal {
+    function safeMint(address to) internal returns (uint256) {
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         _safeMint(to, tokenId);
+        return tokenId;
     }
 
     // Defaults

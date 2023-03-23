@@ -49,6 +49,10 @@ contract Trapp1EArtistKicks is ERC1155, Pausable, AccessControl, ERC1155Supply, 
         mintCharge = amount;
     }
 
+    function withdrawAll() external onlyRole(DEFAULT_ADMIN_ROLE) {
+        require(payable(msg.sender).send(address(this).balance));
+    }
+
     // Defaults
     
     function pause() public onlyRole(DEFAULT_ADMIN_ROLE) {

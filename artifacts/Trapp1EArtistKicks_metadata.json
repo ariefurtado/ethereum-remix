@@ -771,6 +771,13 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawAll",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -1012,11 +1019,11 @@
 			]
 		},
 		"t1e-artist-kicks.sol": {
-			"keccak256": "0xbb8cbabeef9652965cb04a909b5b25a77a0db3b628b70a3505f55221c778af7d",
+			"keccak256": "0xc05ee26346c18b32fe814bc89f4d905f1176fbac9cff60cb00a4fdf07065199e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c5538a83c1e9b96a0ca0af3f8a827b03e5f2aed5841dd3d796c5373b031cb45e",
-				"dweb:/ipfs/QmXcpppbDcybcpuuQyYe2tQk5Xk4DSYrjtmJf3Aep1ENsP"
+				"bzz-raw://c260feb0e5b14486994c78a8d23c664158a23351c21e6c92eed9ab3bb4c046d7",
+				"dweb:/ipfs/QmeSnddNRoznoTyv8q7sKNEKsAXuXuXuX3JabR4UUPigh4"
 			]
 		}
 	},

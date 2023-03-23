@@ -185,11 +185,11 @@
 			]
 		},
 		"t1e-crafted-kicks.sol": {
-			"keccak256": "0xc5adb5c381df92b4f421228d00c460a52cc13aa366292d28fb019b826d184e61",
+			"keccak256": "0x9b69928bee5d4026cff8dbb9b349717850cee87fbdd40fa1a768130b7829b493",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f6be278da378ca06571bf40c3febe9bc7e5d37f49804ce404fe9bbb823487d71",
-				"dweb:/ipfs/QmRJJnn5DDBqs4V4TdgHjt4RhuQxT32J5YTn1hoYN6aHWe"
+				"bzz-raw://10c49449f1d77c5d4d3dac4affa6ea63117aa36227bf8c9607bd9f290fd7a6cb",
+				"dweb:/ipfs/QmaJfeL6WvXfcAwJiWLRRg1kvopPuEVS1P8erEvAGq3pim"
 			]
 		}
 	},
